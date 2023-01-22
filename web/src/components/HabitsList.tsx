@@ -85,7 +85,7 @@ export function HabitsList({ date, onCompletedChanged }: HabitsListProps) {
             </div>
 
             <span className="font-semibold text-xl text-white leading-tight group-data-[state=checked]:line-through group-data-[state=checked]:text-zinc-400">
-              Beber 2L de água
+              {habit.title}
             </span>
           </Checkbox.Root>
         );
