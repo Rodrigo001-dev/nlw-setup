@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { Alert, ScrollView, Text, View } from "react-native";
 import { useRoute } from "@react-navigation/native";
+import { Alert, ScrollView, Text, View } from "react-native";
 import dayjs from "dayjs";
 import clsx from "clsx";
 
@@ -19,10 +19,10 @@ interface Params {
 
 interface DayInfoProps {
   completedHabits: string[];
-  possibleHabits: Array<{
+  possibleHabits: {
     id: string;
     title: string;
-  }>;
+  }[];
 }
 
 export function Habit() {
@@ -30,15 +30,16 @@ export function Habit() {
   const [dayInfo, setDayInfo] = useState<DayInfoProps | null>(null);
   const [completedHabits, setCompletedHabits] = useState<string[]>([]);
 
-  const { params } = useRoute();
-  const { date } = params as Params;
+  const route = useRoute();
+  const { date } = route.params as Params;
 
   const parsedDate = dayjs(date);
+  const dateParams = dayjs(date).format("YYYY-MM-DDT03:00:00.000z");
   const isDateInPast = parsedDate.endOf("day").isBefore(new Date());
   const dayOfWeek = parsedDate.format("dddd");
   const dayAndMonth = parsedDate.format("DD/MM");
 
-  const habitsProgress = dayInfo?.possibleHabits.length
+  const habitsProgress = dayInfo?.possibleHabits?.length
     ? generateProgressPercentage(
         dayInfo.possibleHabits.length,
         completedHabits.length
@@ -49,34 +50,33 @@ export function Habit() {
     try {
       setLoading(true);
 
-      const response = await api.get("day", { params: { date } });
-
+      const response = await api.get("/day", { params: { date: dateParams } });
       setDayInfo(response.data);
-      setCompletedHabits(response.data.completedHabits);
+      setCompletedHabits(response.data.completedHabits ?? []);
     } catch (error) {
-      console.log("🚀 ~ file: Habit.tsx:25 ~ fetchHabits ~ error", error);
+      console.log(error);
       Alert.alert(
-        "Ops!",
-        "Não foi possível carregar as informações dos hábitos"
+        "Ops",
+        "Não foi possível carregar as informações dos hábitos."
       );
     } finally {
       setLoading(false);
     }
   }
 
-  async function handleToggleHabit(habitId: string) {
+  async function handleToggleHabits(habitId: string) {
     try {
-      await api.patch(`habits/${habitId}/toggle`);
+      await api.patch(`/habits/${habitId}/toggle`);
 
-      if (completedHabits.includes(habitId)) {
+      if (completedHabits?.includes(habitId)) {
         setCompletedHabits((prevState) =>
-          prevState.filter((id) => id !== habitId)
+          prevState.filter((habit) => habit !== habitId)
         );
       } else {
         setCompletedHabits((prevState) => [...prevState, habitId]);
       }
     } catch (error) {
-      console.log("🚀 ~ file: Habit.tsx:77 ~ handleToggleHabit ~ error", error);
+      console.log(error);
       Alert.alert("Ops", "Não foi possível atualizar o status do hábito.");
     }
   }
@@ -86,7 +86,7 @@ export function Habit() {
   }, []);
 
   if (loading) {
-    <Loading />;
+    return <Loading />;
   }
 
   return (
@@ -113,13 +113,13 @@ export function Habit() {
           })}
         >
           {dayInfo?.possibleHabits ? (
-            dayInfo.possibleHabits.map((habit) => (
+            dayInfo.possibleHabits?.map((habit) => (
               <Checkbox
                 key={habit.id}
                 title={habit.title}
-                checked={completedHabits.includes(habit.id)}
+                checked={completedHabits?.includes(habit.id)}
+                onPress={() => handleToggleHabits(habit.id)}
                 disabled={isDateInPast}
-                onPress={() => handleToggleHabit(habit.id)}
               />
             ))
           ) : (
