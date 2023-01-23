@@ -1,6 +1,6 @@
 ## :page_with_curl: Projeto
 
-![NLW setup gif mobile]()
+![NLW setup gif mobile](https://github.com/Rodrigo001-dev/nlw-setup/blob/main/.github/nlw-setup.gif)
 
 Aplicação feita na primeira NLW do ano de 2023 com o tema da Setup!
 O objetivo dessa aplicação foi criar um app de registro de hábitos para melhor a qualidade de vida com novos hábitos em 2023
