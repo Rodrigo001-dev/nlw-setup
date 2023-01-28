@@ -1,8 +1,8 @@
 Arguments: 
-  /home/rodrigo/.nvm/versions/node/v18.12.0/bin/node /home/rodrigo/.yarn/bin/yarn.js add @react-navigation/natie-stack
+  /home/rodrigo/.nvm/versions/node/v18.12.0/bin/node /home/rodrigo/.yarn/bin/yarnpkg add expo-notification
 
 PATH: 
-  /home/rodrigo/.nvm/versions/node/v18.12.0/bin:/home/rodrigo/.yarn/bin:/home/rodrigo/.config/yarn/global/node_modules/.bin:/home/rodrigo/bin:/usr/local/bin:/home/rodrigo/go/bin:/usr/local/go/bin:/home/rodrigo/.vscode-server/bin/97dec172d3256f8ca4bfb2143f3f76b503ca0534/bin/remote-cli:/home/rodrigo/.nvm/versions/node/v18.12.0/bin:/home/rodrigo/.yarn/bin:/home/rodrigo/.config/yarn/global/node_modules/.bin:/home/rodrigo/.zinit/polaris/bin:/home/rodrigo/bin:/usr/local/bin:/home/rodrigo/go/bin:/usr/local/go/bin:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Users/Rodrigo/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Rodrigo/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/Rodrigo/AppData/Local/Android/Sdk/platform-tools:/mnt/c/Users/Rodrigo/AppData/Roaming/npm:/home/rodrigo/.yarn/bin:/snap/bin:/usr/lib/jvm/java-17-oracle/bin:/home/rodrigo/Android/emulator:/home/rodrigo/Android/tools:/home/rodrigo/Android/tools/bin:/home/rodrigo/Android/platform-tools:/home/rodrigo/.yarn/bin:/snap/bin:/usr/lib/jvm/java-17-oracle/bin:/home/rodrigo/Android/emulator:/home/rodrigo/Android/tools:/home/rodrigo/Android/tools/bin:/home/rodrigo/Android/platform-tools
+  /tmp/yarn--1674942955494-0.04364761449516119:/home/rodrigo/www/Typescript/nlw-setup/mobile/node_modules/.bin:/home/rodrigo/.config/yarn/link/node_modules/.bin:/home/rodrigo/.nvm/versions/node/v18.12.0/libexec/lib/node_modules/npm/bin/node-gyp-bin:/home/rodrigo/.nvm/versions/node/v18.12.0/lib/node_modules/npm/bin/node-gyp-bin:/home/rodrigo/.nvm/versions/node/v18.12.0/bin/node_modules/npm/bin/node-gyp-bin:/home/rodrigo/.nvm/versions/node/v18.12.0/bin:/home/rodrigo/.yarn/bin:/home/rodrigo/.config/yarn/global/node_modules/.bin:/home/rodrigo/bin:/usr/local/bin:/home/rodrigo/go/bin:/usr/local/go/bin:/home/rodrigo/.vscode-server/bin/97dec172d3256f8ca4bfb2143f3f76b503ca0534/bin/remote-cli:/home/rodrigo/.nvm/versions/node/v18.12.0/bin:/home/rodrigo/.yarn/bin:/home/rodrigo/.config/yarn/global/node_modules/.bin:/home/rodrigo/.zinit/polaris/bin:/home/rodrigo/bin:/usr/local/bin:/home/rodrigo/go/bin:/usr/local/go/bin:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Users/Rodrigo/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Rodrigo/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/Rodrigo/AppData/Local/Android/Sdk/platform-tools:/mnt/c/Users/Rodrigo/AppData/Roaming/npm:/home/rodrigo/.yarn/bin:/snap/bin:/usr/lib/jvm/java-17-oracle/bin:/home/rodrigo/Android/emulator:/home/rodrigo/Android/tools:/home/rodrigo/Android/tools/bin:/home/rodrigo/Android/platform-tools:/home/rodrigo/.yarn/bin:/snap/bin:/usr/lib/jvm/java-17-oracle/bin:/home/rodrigo/Android/emulator:/home/rodrigo/Android/tools:/home/rodrigo/Android/tools/bin:/home/rodrigo/Android/platform-tools
 
 Yarn version: 
   1.22.19
@@ -14,7 +14,7 @@ Platform:
   linux x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/@react-navigation%2fnatie-stack: Not found
+  Error: https://registry.yarnpkg.com/expo-notification: Not found
       at params.callback [as _callback] (/home/rodrigo/.yarn/lib/cli.js:66145:18)
       at self.callback (/home/rodrigo/.yarn/lib/cli.js:140890:22)
       at Request.emit (node:events:513:28)
@@ -40,6 +40,9 @@ npm manifest:
     "dependencies": {
       "@expo-google-fonts/inter": "^0.2.2",
       "@react-navigation/native": "^6.1.2",
+      "@react-navigation/native-stack": "^6.9.8",
+      "axios": "^1.2.3",
+      "clsx": "^1.2.1",
       "dayjs": "^1.11.7",
       "expo": "~47.0.12",
       "expo-font": "~11.0.1",
@@ -48,6 +51,7 @@ npm manifest:
       "react": "18.1.0",
       "react-dom": "18.1.0",
       "react-native": "0.70.5",
+      "react-native-reanimated": "~2.12.0",
       "react-native-safe-area-context": "4.4.1",
       "react-native-screens": "~3.18.0",
       "react-native-svg": "13.4.0",
@@ -822,6 +826,13 @@ Lockfile:
     dependencies:
       "@babel/helper-plugin-utils" "^7.18.6"
   
+  "@babel/plugin-transform-object-assign@^7.16.7":
+    version "7.18.6"
+    resolved "https://registry.yarnpkg.com/@babel/plugin-transform-object-assign/-/plugin-transform-object-assign-7.18.6.tgz#7830b4b6f83e1374a5afb9f6111bcfaea872cdd2"
+    integrity sha512-mQisZ3JfqWh2gVXvfqYCAAyRs6+7oev+myBsTwW5RnPhYXOTuCEw2oe3YgxlXMViXUS53lG8koulI7mJ+8JE+A==
+    dependencies:
+      "@babel/helper-plugin-utils" "^7.18.6"
+  
   "@babel/plugin-transform-object-super@^7.0.0", "@babel/plugin-transform-object-super@^7.18.6":
     version "7.18.6"
     resolved "https://registry.yarnpkg.com/@babel/plugin-transform-object-super/-/plugin-transform-object-super-7.18.6.tgz#fb3c6ccdd15939b6ff7939944b51971ddc35912c"
@@ -1064,7 +1075,7 @@ Lockfile:
       "@babel/types" "^7.4.4"
       esutils "^2.0.2"
   
-  "@babel/preset-typescript@^7.13.0":
+  "@babel/preset-typescript@^7.13.0", "@babel/preset-typescript@^7.16.7":
     version "7.18.6"
     resolved "https://registry.yarnpkg.com/@babel/preset-typescript/-/preset-typescript-7.18.6.tgz#ce64be3e63eddc44240c6358daefac17b3186399"
     integrity sha512-s9ik86kXBAnD760aybBucdpnLsAt0jK1xqJn2juOn9lkOvSHV60os5hxoVJsPzMQxvnUJFAlkont2DvvaYEBtQ==
@@ -1817,6 +1828,19 @@ Lockfile:
       react-is "^16.13.0"
       use-latest-callback "^0.1.5"
   
+  "@react-navigation/elements@^1.3.13":
+    version "1.3.13"
+    resolved "https://registry.yarnpkg.com/@react-navigation/elements/-/elements-1.3.13.tgz#5105fa26df8d32810cd9f14d6ec5a3d2c2bb26d2"
+    integrity sha512-LqqK5s2ZfYHn2cQ376jC5V9dQztLH5ixkkJj9WR7JY2g4SghDd39WJhL3Jillw1Mu3F3b9sZwvAK+QkXhnDeAA==
+  
+  "@react-navigation/native-stack@^6.9.8":
+    version "6.9.8"
+    resolved "https://registry.yarnpkg.com/@react-navigation/native-stack/-/native-stack-6.9.8.tgz#c953a169918a4bdde56f7d2dc1073da4726b4cb7"
+    integrity sha512-74dje939lflsTXJQwCAdznbJ4B6V8sA5CSzuHwbiogL8B6EVXNa/qliXtB7DBAvzeyWDWT3u+gM2vOYJOeXYhA==
+    dependencies:
+      "@react-navigation/elements" "^1.3.13"
+      warn-once "^0.1.0"
+  
   "@react-navigation/native@^6.1.2":
     version "6.1.2"
     resolved "https://registry.yarnpkg.com/@react-navigation/native/-/native-6.1.2.tgz#6fffbf4787c233687fff8fe9ce7364ffce696d38"
@@ -1960,6 +1984,11 @@ Lockfile:
     version "0.2.0"
     resolved "https://registry.yarnpkg.com/@trysound/sax/-/sax-0.2.0.tgz#cccaab758af56761eb7bf37af6f03f326dd798ad"
     integrity sha512-L7z9BgrNEcYyUYtF+HaEfiS5ebkh9jXqbszz7pC0hRBPaatV0XjSD3+eHrpqFemQfgwiFF0QPIarnIihIDn7OA==
+  
+  "@types/invariant@^2.2.35":
+    version "2.2.35"
+    resolved "https://registry.yarnpkg.com/@types/invariant/-/invariant-2.2.35.tgz#cd3ebf581a6557452735688d8daba6cf0bd5a3be"
+    integrity sha512-DxX1V9P8zdJPYQat1gHyY0xj3efl8gnMVjiM9iCY6y27lj+PoQWkgjt8jDqmovPqULkKVpKRg8J36iQiA+EtEg==
   
   "@types/istanbul-lib-coverage@*", "@types/istanbul-lib-coverage@^2.0.0":
     version "2.0.4"
@@ -2290,6 +2319,15 @@ Lockfile:
     version "2.1.2"
     resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
     integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
+  
+  axios@^1.2.3:
+    version "1.2.3"
+    resolved "https://registry.yarnpkg.com/axios/-/axios-1.2.3.tgz#31a3d824c0ebf754a004b585e5f04a5f87e6c4ff"
+    integrity sha512-pdDkMYJeuXLZ6Xj/Q5J3Phpe+jbGdsSzlQaFVkMQzRUL05+6+tetX8TV3p4HrU4kzuO9bt+io/yGQxuyxA/xcw==
+    dependencies:
+      follow-redirects "^1.15.0"
+      form-data "^4.0.0"
+      proxy-from-env "^1.1.0"
   
   babel-core@^7.0.0-bridge.0:
     version "7.0.0-bridge.0"
@@ -2788,6 +2826,11 @@ Lockfile:
     version "2.1.2"
     resolved "https://registry.yarnpkg.com/clone/-/clone-2.1.2.tgz#1b7f4b9f591f1e8f83670401600345a02887435f"
     integrity sha512-3Pe/CF1Nn94hyhIYpjtiLhdCoEoz0DqQ+988E9gmeEdQZlojxnOb74wctFyuwWQHzqyf9X7C7MG8juUpqBJT8w==
+  
+  clsx@^1.2.1:
+    version "1.2.1"
+    resolved "https://registry.yarnpkg.com/clsx/-/clsx-1.2.1.tgz#0ddc4a20a549b59c93a4116bb26f5294ca17dc12"
+    integrity sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==
   
   collection-visit@^1.0.0:
     version "1.0.0"
@@ -3747,6 +3790,11 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/flow-parser/-/flow-parser-0.121.0.tgz#9f9898eaec91a9f7c323e9e992d81ab5c58e618f"
     integrity sha512-1gIBiWJNR0tKUNv8gZuk7l9rVX06OuLzY9AoGio7y/JT4V1IZErEMEq2TJS+PFcw/y0RshZ1J/27VfK1UQzYVg==
   
+  follow-redirects@^1.15.0:
+    version "1.15.2"
+    resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.15.2.tgz#b460864144ba63f2681096f274c4e57026da2c13"
+    integrity sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA==
+  
   fontfaceobserver@^2.1.0:
     version "2.3.0"
     resolved "https://registry.yarnpkg.com/fontfaceobserver/-/fontfaceobserver-2.3.0.tgz#5fb392116e75d5024b7ec8e4f2ce92106d1488c8"
@@ -3761,6 +3809,15 @@ Lockfile:
     version "3.0.1"
     resolved "https://registry.yarnpkg.com/form-data/-/form-data-3.0.1.tgz#ebd53791b78356a99af9a300d4282c4d5eb9755f"
     integrity sha512-RHkBKtLWUVwd7SqRIvCZMEvAMoGUp0XU+seQiZejj0COz3RI3hWP4sCv3gZWWLjJTd7rGwcsF5eKZGii0r/hbg==
+    dependencies:
+      asynckit "^0.4.0"
+      combined-stream "^1.0.8"
+      mime-types "^2.1.12"
+  
+  form-data@^4.0.0:
+    version "4.0.0"
+    resolved "https://registry.yarnpkg.com/form-data/-/form-data-4.0.0.tgz#93919daeaf361ee529584b9b31664dc12c9fa452"
+    integrity sha512-ETEklSGi5t0QMZuiXoA/Q6vcnxcLQP5vdugSpuAyi6SVGi2clPPp+xgEhuMaHC+zGgn31Kd235W35f7Hykkaww==
     dependencies:
       asynckit "^0.4.0"
       combined-stream "^1.0.8"
@@ -4685,6 +4742,11 @@ Lockfile:
     version "4.0.8"
     resolved "https://registry.yarnpkg.com/lodash.debounce/-/lodash.debounce-4.0.8.tgz#82d79bff30a67c4005ffd5e2515300ad9ca4d7af"
     integrity sha512-FT1yDzDYEoYWhnSGnpE/4Kj1fLZkDFyqRb7fNt6FdYOSxlUWAtp42Eh6Wb0rGIv/m9Bgo7x4GhQbm5Ys4SG5ow==
+  
+  lodash.isequal@^4.5.0:
+    version "4.5.0"
+    resolved "https://registry.yarnpkg.com/lodash.isequal/-/lodash.isequal-4.5.0.tgz#415c4478f2bcc30120c22ce10ed3226f7d3e18e0"
+    integrity sha512-pDo3lu8Jhfjqls6GkMgpahsF9kCyayhgykjyLMNFTKWrpVdAQtYyB4muAMWozBB4ig/dtWAmsMxLEI8wuz+DYQ==
   
   lodash.throttle@^4.1.1:
     version "4.1.1"
@@ -5907,6 +5969,11 @@ Lockfile:
       kleur "^3.0.3"
       sisteransi "^1.0.5"
   
+  proxy-from-env@^1.1.0:
+    version "1.1.0"
+    resolved "https://registry.yarnpkg.com/proxy-from-env/-/proxy-from-env-1.1.0.tgz#e102f16ca355424865755d2c9e8ea4f24d58c3e2"
+    integrity sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==
+  
   pump@^3.0.0:
     version "3.0.0"
     resolved "https://registry.yarnpkg.com/pump/-/pump-3.0.0.tgz#b4a2116815bde2f4e1ea602354e8c75565107a64"
@@ -6027,6 +6094,19 @@ Lockfile:
     version "0.70.3"
     resolved "https://registry.yarnpkg.com/react-native-gradle-plugin/-/react-native-gradle-plugin-0.70.3.tgz#cbcf0619cbfbddaa9128701aa2d7b4145f9c4fc8"
     integrity sha512-oOanj84fJEXUg9FoEAQomA8ISG+DVIrTZ3qF7m69VQUJyOGYyDZmPqKcjvRku4KXlEH6hWO9i4ACLzNBh8gC0A==
+  
+  react-native-reanimated@~2.12.0:
+    version "2.12.0"
+    resolved "https://registry.yarnpkg.com/react-native-reanimated/-/react-native-reanimated-2.12.0.tgz#5821eecfb1769b1617a67a2d4dec12fdeedb2b6e"
+    integrity sha512-nrlPyw+Hx9u4iJhZk9PoTvDo/QmVAd+bo7OK9Tv3hveNEF9++5oig/g3Uv9V93shy9avTYGsUprUvAEt/xdzeQ==
+    dependencies:
+      "@babel/plugin-transform-object-assign" "^7.16.7"
+      "@babel/preset-typescript" "^7.16.7"
+      "@types/invariant" "^2.2.35"
+      invariant "^2.2.4"
+      lodash.isequal "^4.5.0"
+      setimmediate "^1.0.5"
+      string-hash-64 "^1.0.3"
   
   react-native-safe-area-context@4.4.1:
     version "4.4.1"
@@ -6746,6 +6826,11 @@ Lockfile:
     version "2.0.0"
     resolved "https://registry.yarnpkg.com/strict-uri-encode/-/strict-uri-encode-2.0.0.tgz#b9c7330c7042862f6b142dc274bbcc5866ce3546"
     integrity sha512-QwiXZgpRcKkhTj2Scnn++4PKtWsH0kpzZ62L2R6c/LUVYv7hVnZqcg2+sMuT6R7Jusu1vviK/MFsu6kNJfWlEQ==
+  
+  string-hash-64@^1.0.3:
+    version "1.0.3"
+    resolved "https://registry.yarnpkg.com/string-hash-64/-/string-hash-64-1.0.3.tgz#0deb56df58678640db5c479ccbbb597aaa0de322"
+    integrity sha512-D5OKWKvDhyVWWn2x5Y9b+37NUllks34q1dCDhk/vYcso9fmhs+Tl3KR/gE4v5UNj2UA35cnX4KdVVGkG1deKqw==
   
   string-width@^4.1.0, string-width@^4.2.0:
     version "4.2.3"
